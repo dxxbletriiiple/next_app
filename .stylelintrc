@@ -1,0 +1,15 @@
+{
+	"extends": ["stylelint-config-standard"],
+	"rules": {
+		"indentation": ["tab"],
+		"color-hex-case": "lower",
+		"color-function-notation": "modern",
+		"selector-class-pattern": "^.*$",
+		"declaration-block-no-redundant-longhand-properties": [
+			true,
+			{
+				"ignoreShorthands": ["/grid/"]
+			}
+		]
+	}
+}
