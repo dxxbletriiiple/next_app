@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Htag } from 'components';
 
 export default function Home(): JSX.Element {
 	return (
@@ -9,6 +10,7 @@ export default function Home(): JSX.Element {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+			<Htag tag='h1'>text</Htag>
 		</>
 	);
 }
