@@ -11,6 +11,7 @@ export default function Home(): JSX.Element {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Htag tag='h1'>text</Htag>
+
 			<Button appearance='primary'>text</Button>
 			<Button appearance='ghost'>text</Button>
 		</>
