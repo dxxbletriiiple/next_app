@@ -36,8 +36,13 @@
 .arrow {
 	display: inline-block;
 	margin-left: 10px;
-	.down {
-		transition: 0.3s all ease;
-		transform: rotate(90deg);
-	}
+}
+.down {
+	transition: 0.3s all ease;
+	transform: rotate(90deg);
+}
+
+.primary svg,
+.ghost:hover svg {
+	fill: var(--white);
 }
