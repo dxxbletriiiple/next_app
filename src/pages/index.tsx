@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import { Button, Htag, P, Tag } from 'components';
+import { Button, Htag, P, Tag, Rating } from 'components';
+import { useState } from 'react';
 
 export default function Home(): JSX.Element {
+	const [rating, setRating] = useState<number>(5);
 	return (
 		<>
 			<Head>
@@ -21,11 +23,7 @@ export default function Home(): JSX.Element {
 			<P fz='s'>asdasasdasd</P>
 			<P fz='m'>asdasasdasd</P>
 			<P fz='l'>asdasasdasd</P>
-			<Tag size='s'>asdasdasd</Tag>
-			<Tag color='red'>asdasdasd</Tag>
-			<Tag color='grey'>asdasdasd</Tag>
-			<Tag color='green'>asdasdasd</Tag>
-			<Tag color='primary'>asdasdasd</Tag>
+			<Rating rating={rating} setRating={setRating} isEditable />
 		</>
 	);
 }
