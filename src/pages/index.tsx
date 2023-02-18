@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Button, Htag } from 'components';
+import { Button, Htag, P } from 'components';
 
 export default function Home(): JSX.Element {
 	return (
@@ -18,6 +18,9 @@ export default function Home(): JSX.Element {
 			<Button appearance='ghost' arrow='down'>
 				text
 			</Button>
+			<P fz='s'>asdasasdasd</P>
+			<P fz='m'>asdasasdasd</P>
+			<P fz='l'>asdasasdasd</P>
 		</>
 	);
 }
