@@ -3,5 +3,10 @@ import { FooterProps } from './Footer.props';
 import styles from './Footer.module.scss';
 
 export const Footer = ({ children }: FooterProps): JSX.Element => {
-	return <div>{children}</div>;
+	return (
+		<div>
+			footer
+			{children}
+		</div>
+	);
 };
