@@ -7,13 +7,13 @@ import { FunctionComponent } from 'react';
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
 	return (
-		<div>
-			<Header />
-			<div>
-				<Sidebar />
+		<div className={styles.wrapper}>
+			<Header className={styles.header} />
+			<Sidebar className={styles.sidebar} />
+			<div className={styles.body}>
 				<div>{children}</div>
 			</div>
-			<Footer />
+			<Footer className={styles.footer} />
 		</div>
 	);
 };
