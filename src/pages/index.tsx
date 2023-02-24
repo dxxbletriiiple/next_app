@@ -19,10 +19,10 @@ export default function Home({ menu, firstCategory }: HomeProps): JSX.Element {
 
 			<ul>
 				{menu.map((m) => (
-					<li key={m._id.secondCategory}>{m._id.secondCategory}</li>
+					<li key={crypto.randomUUID()}>{m._id.secondCategory}</li>
 				))}
 			</ul>
-			<Rating rating={rating} setRating={setRating} isEditable />
+			{/* <Rating rating={rating} setRating={setRating} isEditable /> */}
 		</Layout>
 	);
 }
@@ -30,7 +30,9 @@ export default function Home({ menu, firstCategory }: HomeProps): JSX.Element {
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const firstCategory = 0;
 
-	const menu = axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', { firstCategory });
+	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+		firstCategory,
+	});
 
 	return {
 		props: {

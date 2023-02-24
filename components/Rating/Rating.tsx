@@ -19,7 +19,7 @@ export const Rating = ({ isEditable = false, rating, setRating, ...props }: Rati
 						[styles.filled]: i < currentRating,
 						[styles.editable]: isEditable,
 					})}
-					key={i}
+					key={crypto.randomUUID()}
 					onMouseEnter={() => changeDisplay(i + 1)}
 					onMouseLeave={() => changeDisplay(rating)}
 					onClick={() => setRating && setRating(i + 1)}
