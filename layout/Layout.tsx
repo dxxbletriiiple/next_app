@@ -1,19 +1,19 @@
+import { FunctionComponent } from 'react';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 import { Sidebar } from './Sidebar/Sidebar';
 import { LayoutProps } from './Layout.props';
-import styles from './Layout.module.scss';
-import { FunctionComponent } from 'react';
+import st from './Layout.module.scss';
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
 	return (
-		<div className={styles.wrapper}>
-			<Header className={styles.header} />
-			<Sidebar className={styles.sidebar} />
-			<div className={styles.body}>
+		<div className={st.wrapper}>
+			<Header className={st.header} />
+			<Sidebar className={st.sidebar} />
+			<div className={st.body}>
 				<div>{children}</div>
 			</div>
-			<Footer className={styles.footer} />
+			<Footer className={st.footer} />
 		</div>
 	);
 };
