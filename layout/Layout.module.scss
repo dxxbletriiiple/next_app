@@ -9,13 +9,16 @@
 		'footer footer footer footer';
 	min-height: 100vh;
 }
+
 .header {
 	grid-area: header;
 	display: none;
 }
+
 .footer {
 	grid-area: footer;
 }
+
 .sidebar {
 	grid-area: sidebar;
 }
@@ -23,6 +26,7 @@
 .body {
 	grid-area: body;
 }
+
 @media (max-width: 765px) {
 	.wrapper {
 		grid-template-columns: minmax(320px, 1fr);
@@ -31,9 +35,11 @@
 			'body'
 			'footer';
 	}
+
 	.sidebar {
 		display: none;
 	}
+
 	.header {
 		display: block;
 	}
